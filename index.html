@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Fun form</title>
+    </head>
+    <body>
+        <form method="POST" action="/formdata">
+        <label for="data"> Enter Text to Post:</label>
+        <input type="text" name="data" value="Enter Text">
+        Size<input type="number" name="age" id="age" min="1" max="200" step="3" >
+        <input type="color" name="color"><br/>
+        <textarea name="longtext" cols="80" rows="10"></textarea>
+        <br/>
+        <input type="submit" name="submit" value="Submit">
+    
+    </form>
+    <hr/>
+    <div>
+        Search
+        <form method="GET" action="/search">
+        <input type="text" name="q">
+        <input type="submit" value="Search for it">
+        </form>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>The Data</title>
+
+    
+</head>
+<body>
+<h1>Here is thee output</h1>
+
+<% if (data.length > 0 ){
+ for (var i = 0; i < data.length; i++){
+%>
+<div id="dataout<%= i %>" style="color: <%= data[i].color %>; font-size: <%= data[i].size %>px"><marquee behavior='alternate' scrollamount='20'>"<a href="/displayrecord?_id=<%= data[i]._id %>"  style="color: <%= data[i].color %>;font-size: <%= data[i].number %>px"><%= data[i].text %></a></marquee></div>
+
+<%
+}
+} 
+%>
+<form method="POST" action="/formdata">
+        <label for="data"> Enter Text to Post:</label>
+        <input type="text" name="data" value="Enter Text">
+        Size<input type="number" name="age" id="age" min="1" max="200" step="3" >
+        <input type="color" name="color">
+        <input type="submit" name="submit" value="Submit">
+    
+    </form>
+</body>
+
+
+</html>
